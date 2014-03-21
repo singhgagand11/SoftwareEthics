@@ -1,0 +1,306 @@
+% CSC 300: Professional Responsibilities
+% Gagandeep Singh Kohli
+
+  
+% Two Column Format
+\documentclass[11pt]{article}
+%this allows us to specify sections to be single or multi column so that things
+% like title page and table of contents are single column
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{framed}
+
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{letterpaper}
+
+ 
+\begin{document}
+
+\title{\vfill App Store: Am iSecure?} %\vfill gives us the black space at the top of the page
+\author{
+By Gagandeep Singh Kohli\vspace{10pt} \\
+CSC 300: Professional Responsibilities\vspace{10pt} \\
+Dr. Clark Turner\vspace{10pt} \\
+}
+%\date{October 22, 2010} %Or use \Today for today's Date
+\date{\today}
+
+\maketitle
+
+\vfill  %in combinaion with \newpage this forces the abstract to the bottom of the page
+\begin{abstract}
+In 2010, Apple was sending personal data of iPhone users such as birthdays, gender and postal codes to advertisement agencies \cite{computerworld}. This data was sent by applications installed on the iPhones that had been approved by Apple and published to the App Store. After acknowledging the presence of these features, Apple continued to allow  applications to send out users' personal information without informing its consumers \cite{newyorktimes}. The Wall Street Journal claims that people were shocked after hearing that applications sold massive quantities of confidential information to advertisement networks \cite{iphonedownloadblog} \cite{threatpost}. In addition, people claimed that actions of these applications intruded upon their personal privacy and thus gave companies insight to their private life \cite{threatpost}. Therefore, the following question arises: was it ethical for Apple to allow the continued transmission of user sensitive data to application vendors? Software Engineering Code of Ethics will be used to show that the actions of Apple and application developers are unethical in terms of privacy and business practices. 
+\end{abstract}
+
+\thispagestyle{empty} %remove page number from title page
+\footnote{Edited and revised by: Sean Glover - darkone238@gmail.com \& Liz O'Neal - caldrama@sbcglobal.net}
+\newpage
+
+
+%Create a table of contents with all headings of level 3 and above.
+%http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Table_of_contents has
+%info on customizing the table of contents
+\thispagestyle{empty}  %Remove page number from TOC
+\tableofcontents
+
+\newpage
+
+%end the 1 column format
+
+
+%start 2 column format
+\begin{multicols}{2}
+%Start numbering first page of content as page 1
+\setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%
+%%% INtroduction %%%
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+%%% Known Facts  %%%
+%%%%%%%%%%%%%%%%%%%%
+ 
+\section{Facts}
+With growing demand for both mobile devices and personalization, software companies are focusing their software development toward the mobile platform. As a result, companies such as Apple, who originally started in the computer industry, have shifted their focus toward the mobile market \cite{eweek}.  
+
+In 2007, Apple entered the mobile market with the release of the iPhone \cite{eweek}. Michelle Maisto, editor at eWeek, states that Apple is ranked as the fourth largest mobile device carrier in the world of mobile market. After selling 7 million iPhone units, Apple launched the iPad and an application market \cite{gartner}. Refered to as the App Store, Apple's application market ranked number one among similar application market by out selling Microsoft's Windows Marketplace and Google's Market \cite{radio-electronics}. 
+
+In April 2010, Alasdair Allan, a researcher at Exeter University, found a file named \emph{consolidated.db} that Allen states exists on every iPad and iPhone \cite{oreilly}. The file contains information such as a user's name, gender, birthday, pinpoint location and Unique Device Identifier (UDID). Additionally, a UDID is a number given to each device and may be used to identify a particular user \cite{theregister}. Given that the file is stored without any security protection, downloaded applications are given permission to access the file without the consent of the user \cite{pcmag}. 
+ 
+In addition, Eric Smith from Bucknell University discovered that UDIDs of iPhone devices were being shared with various advertisement agencies by applications downloaded  on the iPhone. The UDID may be used to track a mobile device users' online activity such as which application the client have download \cite{pskl}. Along with the UDIDs, users' geographic locations were being transmitted as well \cite{pskl}.
+
+In December 2010, Wall Street Journal issued an investigative article, reporting that applications sold on the App Store have accessed the conolidated.db file \cite{wsj}. Their investigation discovered that Pandora Music Inc., an application which is available on the App Store, has collected and transmitted users' sensitive data to advertisement agencies. The Wall Street Journal claimed that the popular music application sent users' age, gender, location, password, contacts and UDID to various ad networks \cite{wsj}. 
+
+After acknowledging Pandora's behavior, the Wall Street went on to closely examine the behavior of other top applications sold on the market. As a result, they found out that of the top 101 most popular applications, fifty-five had shown to have transmitted similar information to other companies without user's awareness \cite{wsj}.  
+
+Further on, a research team, Veracode, took apart various applications found on the App Store that had been accused of exploiting users' personal information. They found that applications such as Pandora, sold on the market for free had precompiled advertisement libraries. These library codes contained ``variable references … that appear to transmit the user's birthday, gender, and postal code information" to advertisement networks \cite{veracode}. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Research Question %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Question}
+It is now clear that these facts lead to this ethical question:
+
+Was it ethical for Apple to allow the continued transmission of sensitive user data to application vendors and advertisement agencies?
+
+The applications not only have access to the UDIDs of the phone, but also users' location, gender, age, and Internet protocol address \cite{veracode}. If all of this data combined falls into the wrong hands or is used inappropriately by advertisement agencies, identity theft may occur. Since the data is collected by applications, without the consent of the user, one never knows who has access to their personal information. Therefore, the answer to this question will help software engineers better understand how to handle issues of privacy.    
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Extant Arguments from External Sources %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Arguments Against}
+\emph{It is not ethical for Apple to allow the continued transmission of user sensitive data to application vendors without the user's consent:}
+
+\subsection{Uninformed Users}
+An anonymous user at Threatpost claims that ``folks who installed [applications with] spyware on their phones weren't aware of the extent to which their personal data was being passed to others" because the users were not fully informed \cite{threatpost}.
+
+Further on, the user thinks that application developers must provide users with notice as to how the application works. Then afterwards it should be the choice of the users to either approve or not approve the functionality of the application. According to the anonymous users, if a consumer accepts to share his personal data, ``most folks would rather decide for themselves who gets their personal information and when" \cite{threatpost}. 
+
+
+\subsection{Court Cases}
+Several class action lawsuits were filed against Apple and its applications vendors. These companies were accused by consumer for tracking users' activity and sharing consumers personal information with advertisement agencies. 
+
+On December 23 2010, Jonathan Lalo filed a complaint claiming that applications, such as Pandora, Paper Toss and Weather Channel, had access to his personal information. In addition, these application did not inform or require his consent. Thus, Lalo suggests this violated federal computer fraud and privacy laws \cite{technobuffalo}. 
+
+On April  22 2011, Ajjampur and Devito sued Apple in a Florida district court. They claimed that Apple's new mobile devices , iPhone 4 and iPad, tracked users' geo-locational data. Furthermore, they claimed that location data of the user is consider personal information \cite{AABloomberg}. Therefore, Apple was accused of invasion of privacy and computer fraud for tracking its users.
+
+On May 2011, Lymaris M. Rivera Diaz sued Apple in a Puerto Rico district court. Diaz accused Apple of ``intentional interception of personally identifying information." This mean that UDIDs, along with users' location data were used by advertisement agencies without the consent of users, violating their privacy \cite{pcmag}.
+
+Diaz also states that Apple claims to their users that they take security seriously, then he wonders how did Pandora gain access to his personal information? Diaz argues in his case that Apple didn't fully protect its users and applications didn't inform the users of their actions \cite{pcmag}\cite{wsj}.
+
+\subsection{Violation of Privacy}
+Subsequent to following the acknowledgment that applications in fact, do collect users' personal information. A Treatpost article called ``Pandora Mobile App Transmits Gobs Of Personal Data" by Paul Roberts explains that gathering personal information about a user, without their consent gives advertisers ``significant insight into a person's life." These applications violate one's personal property and privacy laws \cite{threatpost}.
+
+
+\section{Arguments for}
+\emph{It is ethical for Apple to allow the continued transmission of user sensitive data to application vendors:}
+
+\subsection{Hidden Cost of Free Applications}
+Paul Roberts at threatpost.com defends Apple by saying services or applications labeled free on the App Store are not really free. There is a hidden cost attached. Due to the fact that companies cannot function without money, ``applications that are free need to use advertisement for employing their products to the users" \cite{threatpost}. Also, an anonymous user further claims that since ``Companies can't function without money, either pay for the full app and get rid of the ads or suck it up and realize you are paying in a non-monetary form" \cite{threatpost}. The anonymous consumer concludes that applications vendors have the right to sell users' personal data to advertisers in exchange of providing clients with free software \cite{threatpost}. 
+
+\subsection{User Agreement}
+In response to the Lalo lawsuit, Apple argues that when a user buys their iPhone, he/she is presented with Apple's terms and conditions.  Apple's stipulations clearly state to users how their product is able to collect and use personal information to enhance their products \cite{telegraph}. The policy explicitly states that Apple ``may collect information … [about the user to] better understand consumers behavior and improve [its] products, services, and advertising" based on needs \cite{appleTOS}. Apple concludes that if a user buys their products then these agreements are acknowledge by the users. 
+
+\subsection{Improve Productivity}
+In the article, ``How to See the Secret Tracking Data in Your iPhone," William Fenton explains to Apple users that Apple is tracking and collecting user locations to build a database. The database will assist Apple in improving the runtime speed of geo-locations. Applications, such as Maps, require global location to function \cite{pcmag}. Therefore, geo-location points are collected through the use of cellular network towers. Although, these points are not accurate and do not significantly provide insight into one's life \cite{pcmag}. These geo-location points do in fact aid the phone by improving its network quality and other location service applications \cite{tomsguide}.   
+
+Furthermore, in a research study by Mr. Levinson, who extracts data from mobile devices for legal cases, argues that collecting of geo-location helps Apple improve its phone's productivity \cite {newyorktimes}. Along with the support of many security experts, he states that Apple maintains a record of users' location to help the phone ``pinpoint locations more quickly. [Hence], saving bandwidth and battery life, when [device] owners use location-based services, like maps and navigation" \cite {newyorktimes}. These claims were further supported by Mark Seiden, who is a security consultant in Silicon Valley. He states that Apple do not have any intention of using the data stored on the phone to track people. However Seiden admits that the company needs to handle users' personal data more diligently \cite{newyorktimes}. 
+
+
+%%%%%%%%%%%%%%%%
+%%% Analysis %%%
+%%%%%%%%%%%%%%%%
+\section{Analysis}
+
+\subsection{Why the SE Code Applies}
+To determine whether or not Apple's decision to allow continued transmission of user's sensitive data was ethical or not, I will analyze the situation with the use of Software Engineering Code of Ethics provided by Association for Computing Machinery. The code provides principles related to behavior and decisions made by software developers. This includes ``practitioners, educators, managers, supervisors and policy makers, trainees and students of the profession" during the development of softwares \cite{secode}. Therefore, the SE code is valid in judging ethical behaviors of any one who claims themselves as software engineers.  
+
+These sets of standards apply to Apple since they label themselves as ``\underline{software engineers} [who] are the brains behind some of the industry's biggest breakthroughs" \cite{applecorpVal}. Hence, Apple is  an organization of engineers who continue to maintain software as "beneficial and respected profession." Therefore, Apple is entitled to follow the sets of tenants listed in the Software Engineering Code of Ethics. \cite{secode}.
+
+ 
+\subsection{SE Code 2.03: Unauthorized Use of Data}
+Apple's actions with regard to the authorized use of users private information applies to SE Code 2.03, which reads:
+
+\begin{framed}
+\noindent
+\bf{Original SE Code Tenet: 2.03} 
+Use the \underline{property} of a \underline{client} or employer only in ways properly authorized, and with the \underline{client's} or employer's knowledge and \underline{consent} \cite{secode}.
+\end{framed}
+
+The SE code 2.03 dictates that all software engineers must use the property of the client or the employer in a properly authorized way. And only after informing and inquiring the consent of the property owners.  The SE code is relevant in the case of Apple because Apple continued to allow applications to collect and share user personal identifying information with advertisement agencies without clients approval. The ``clients," as stated in the tenant will be used to refer to iPhone users. In the fact section, I state that Apple's App Store was found to contain applications that collected users' personal data such as age, gender, birthday and UDID. Since this data can be used to identify a user so the personal data listed above will be used to refer to ``property" of the user. The term authorized is used in the code above, which means to give permission \cite{dictionary}. Then "properly authorized" requires Apple and application developers to inform its users of how their personal information will be used. After Apple's clients are informed, device owners must give consent to use their personal information.
+
+With these appropriate substitutions, SE code 6.06 reads: 
+
+\begin{framed}
+\noindent
+\bf{Transformed SE Code Tenet:} 
+Use personal information of \underline{Mobile device users} only in ways properly \underline{authorized} and with user's \underline{knowledge} and the \underline{permission}.  
+\end{framed}
+
+\subsubsection{Users' Consent}
+According to a lawsuit between Jonathan Lalo and Apple, Lalo concludes that Apple and applications downloaded from the App Store did not obtain consent from the product owners to have their personal data send to advertisement agencies and states the users were not aware of their actions as well. This is because Lalo explains that mobile users trust in Apple code of conduct and privacy policy \cite{scribd}.   
+
+Since App Store is only an exclusive application store for all iDevices, Apple believes that it is their duty to offer tight control of what applications should be allowed in its store \cite{developerApple}. In order for Apple to offer ``strong privacy protections," developers must agree to Apple's iOS Developer Agreement \cite{insiderprivacy}. This agreement ensures that applications are reliable, perform as expected and are free of explicit and offensive material \cite{developerApple}. Therefore, Apple reviews all applications available in the App Store before offering it to its consumers \cite{scribd}.
+
+With the tight security of the App Store, Apple claims to its users that its store is free of ``apps that violate a users privacy" \cite{developerApple}. Apple's code of conduct explicitly states to their users that ``…[they] cannot transmit data about a user without obtaining the user's prior permission. Therefore, providing the user with access to information about how and where the data will be used" \cite{theregister}. Apple also controls the development process for Apps available on the store. The development process has Apple in full control of applications development and functionality \cite{developerApple}.
+
+In April 2010, Apple revised its iOS Developer Agreement to ban applications from sending data to any third parties except only when a user gave consent to the developers. The added statements reads ``the use of third party software in Your Application to collect and send Device Data to a third party for processing or analysis is expressly prohibited" \cite{insiderprivacy}.  
+ 
+Therefore, Lalo felt safe downloading applications from the App Store. The Wall Street Journal's research suggests that among various applications, like Pandora Media, and Apple did in fact collect users' personal information. In addition, these Businesses sold the information to advertisement agencies. Therefore, Lalo and other mobile users claimed to be victims with regard to privacy violation. Since no prior permission was given to the applications for transmission of personal information \cite{wsj} \cite{scribd}. 
+
+Lalo and other mobile device users trusted in Apple. Thus, users were never aware that applications had the authority to sell off their personal information \cite{scribd}. In addition, applications and Apple did not inform its users or obtain consent therefore customers were led into believing that their online privacy was safe \cite{scribd}. By collecting and sharing users' personal information, Apple and applications did not respect the personal data of its users. Thus, Apple broke users' trust.
+
+In conclusion, Apple and application developers created an unhealthy relationship with their clients by not respecting their users' private life. Furthermore, they misused consumers' personal information. The court case of Lalo vs. Apple ruled that since the common law such as the fourth amendment protects the privacy of the user, applications engaged in authorized use of personal data, Apple violated the common laws \cite{wsj} \cite{scribd}. Due to the fact that Apple and its applications did not notify its users of the unauthorized use of personal information. Their actions were inconsistent with their laws as well, Apple and the application developers broke SE Code 2.03.   
+
+
+\subsection{SE Code 1.06: Deception}
+Apple's policy claims to its users that they provide ``strong protection," but various sources such as the Wall Street Journal found that Apple allows applications to collect and sell users' sensitive data to advertisement agencies. This can be applied to SE code 1.06, which states the following:
+
+\begin{framed}
+\bf{Original SE Code Tenet: 1.06} 
+Be fair and \underline{avoid deception} in all \underline{statements}, particularly public ones, concerning \underline{software} or related documents, methods and \underline{tools} \cite{secode}.
+\end{framed}
+
+The SE Code dictates that software engineers (Apple) should be fair and avoid deception in all claims made to the users. Users should never be lied to or mislead about how the company or the software itself functions. Dictionary.com defines deception as ``the act of misleading another through intentionally false statements or fraudulent actions” \cite{deception}. Avoid deception as used in the code tenant would require Apple and application developers to abstain from making any false statements, regarding confidentiality of the users. 
+
+Software and tools would be used to refer to applications downloaded from the App Store and Apple's mobile products. Tools such as the iPhone and iPad are the devices used by Apple's clients (public).
+ 
+With these appropriate substitutions, SE code  1.06 reads:
+
+\begin{framed}
+\bf{Transformed SE Code Tenet:}
+Be fair and avoid \underline{deception, particularly} \underline{those regarding confidentiality} of the client in all \underline{statements made by Apple} regarding their product and \underline{applications}.
+\end{framed}
+
+
+\subsubsection{Confidentiality \& Respect}
+In the lawsuit of Diaz vs. Apple, Lymaris M. Rivera Diaz accused Apple and application developers for ``intentional interception of personally identifying information". This lawsuit was filed because an insecure file contained UDID along with user's personal data such as gender, age and location. In the previous analysis section, it was revealed that Apple reviews each application available in their store before offering it to users. Apple have implemented app privacy standards for its customers" ensuring that the user is safe \cite{theregister}. In the fact section, Veracode and Wall Street Journal found applications of collecting and sharing users data and the personal data was stored in an ``insecure file." User confidential information was not protected, indicating Apple mislead their clients into believing that they were protected \cite{pcmag}\cite{wsj}. 
+
+Also Bud Tribble, Apple's vice president of software technology, testified that Apple does not share customers' information with third parties without informing its users. Tribble also claims that Apple does not collect users' locational points or Apple ever plans to do so \cite{bgr}. If the claims of Tribble are proven to be false, then Apple and Tribble would be seen to make deceptive promises \cite{ADvApple}.
+
+On April 22, 2011, Ajjampur and Devito filed a lawsuit against Apple claiming that Apple's iPhones and 3G iPads kept track of users geo-locational information. 
+Security experts Allan and Warden research on the devices led to a conclusion that the file is hidden from the users. However, it is stored unencrypted therefore making it easier for Apple or third parties to access \cite{ADvApple}.  Then Apple on behalf of Tribble made false statement to the public. Also Apple had failed to make its users aware of their actions in their Term and Conditions. Apple never required the consent to track its users. The pitfalls claimed that if the users had known that Apple planned to use its device for tracking, it would affect users' decisions to purchase the product. Furthermore, Simon Davis, a director of Privacy International, states Apple had failed to take users' privacy seriously \cite{ADvApple} \cite{guardian}. 
+
+Apple did not protect the privacy of their users and neglected to provide them  with respect. Hence, Apple broke two of their Business Values:  Respect and Confidentiality. This is how the Apple Business Values defines these terms:
+
+\begin{description} 
+\item[Confidentiality] - Protect the confidentiality of Apple's information and the information of our customers, suppliers, and employees \cite{applecorpVal}.
+
+\item[Respect] - Treat customers, suppliers, employees and others with respect and courtesy \cite{applecorpVal}.
+\end{description}
+
+
+Apple made a written statement that claimed the company will protect all confidential information of its users and thus will treat the user with respect. Therefore, by not taking appropriate steps to protect and respect confidential information of the user as claimed in their Business Values, Apple made fallacious statements to their consumers. Therefore, the court ruled that Apple's inadequate disclosures made in their privacy policy were deceptive and they treated their customers unfairly. Thus, Apple violated SE Code 1.06 by making deception statements.  
+
+\subsection{SE Code 3.12: Identify Document to Clients}
+It was previously stated that Apple and applications did not indicate to their clients how their applications work. This form of behavior falls under SE code 3.12 which states the following:
+\newpage
+\begin{framed}
+\bf{Original SE Code Tenet:} 3.12. \underline{Work} to develop software and related documents that \underline{respect the privacy} of those who will be affected by that software \cite{secode}.
+\end{framed}
+
+The SE code dictates that software engineers should develop software and related documents that do not violate the privacy of the products users. 
+
+In this situation, Apple and App Store developers are the ones who create softwares and it is their duty to respect the privacy of their clients. Clients or product users are the ones who are affected by the software. 
+
+Therefore with appropriate substitutions, SE Code 3.12 reads that software engineers should:
+ 
+\begin{framed}
+\bf{Transformed SE Code Tenet:} 
+\underline{Apple and application developer} \underline{shall work} to develop software and related documents that \underline{respect the privacy of its users} who will be affected by that software.\end{framed}
+  
+
+\subsubsection{WP29} 
+On May 16, 2011, Europe's Working Party established a set of guidelines regarding geo-location services on smart mobile devices, known as Article 29 (WP29). These  were established after mobile companies like Apple and among others, were found tracking users geo-location. The WP29 was adopted because under European privacy laws, geo-location data is considered ``personal data". The party determined that  the collection, use and other processing of geo-location data through mobile devices requires explicit informed consent of the individual" \cite{EU29}. 
+
+Among the many opinions adopted, the following few strictly apply to Apple:
+
+\begin{itemize}
+\item One of the main risks of location data processing is that the user is unaware that the device transmits the location data and to whom the information is provided \cite{EU29}
+
+\item There risk that the consent for certain applications to use location data is invalid because the information about the key elements of the processing is incomprehensible to the user, outdated or otherwise inadequate \cite{EU29}.
+
+\item Because location data from smart mobile devices reveal intimate details about the private life of their users, the main applicable and legitimate ground is prior informed consent \cite{EU29}.
+
+\item Consent cannot be obtained through general terms and conditions; rather, consent must be specific for the different purposes that location data is collected, used or otherwise processed \cite{EU29}
+\end{itemize}
+
+Apple tracking policies are not clearly presented to the users, they are unaware that the company tracks their private data. Given that collected geo-locational data can be used to identify any users under the privacy laws, a formal consent from the user must be acquired. In the previous analysis, Apple was found of not acquiring consent or making its users aware. Thus, software developers did not develop software that respects the privacy of the users.  
+
+Furthermore, Apple did not identity or clearly present to the clients how their software functions. When a user downloads an application form the App Store, they are provided with a one sentence dialog box indicating the permission needed by the application in order to run. The users must accept the dialog in order to run the applications. Hence, users have no way of opting out from the permission. Therefore, users must accept the guidelines of the applications in order to use the software. Users state that a sentence is not enough to fully explain how an application might use its given permissions \cite{wsj}. Thus, users really don't know how permissions are being used by downloaded applications \cite{wsj}. If an application violates its given permission, then how can a user trust software developers?
+
+``If a user allows an application to access [their] location information, he/she has no way of knowing if the application will send her location to a location-based service, to advertisers, to the application developer," or to any other entity \cite{galegroup}. Companies are tracking people everywhere they go, thus a user feels unsafe. Therefore, Aaron Mayer, an attorney, states that ``If you are a federal marshal you have to have a warrant to do this kind of thing, and Apple [and other companies are] doing it without one" \cite{insiderApple}. In addition, these companies are breaking federal laws and intruding consumers private data.   
+
+According to SMobile, ``a mobile security company reports that  one out of every 20 apps can place a call to any number without approval from the user. Also, 3\% of apps can send an SMS to any number and 383 apps can read or use authentication credentials from another service or app" \cite{mashable}. In addition, applications can send users' contact list to advertisement \cite{mashable}. Thus, users friend and family personal information can also be misused by advertisement, leading to identify theft. Therefore, a user lacks visibility of how an application can use their private data. Since applications purchased from the store do not fully identify to the users how and where consumers personal information might be used \cite{threatpost}.
+  
+Applications purchased from the App Store have abused their given permission by not providing users with clear documentation of their program's functions.  Additionally, clients were not aware that the company and applications had insight into their lives and no prior consent from the users was granted \cite{technewsy}. Therefore, Apple violated intellectual property of the user by not identifying or acquiring prior consent from the user on how their products will track and collect users' location. Therefore Apple broke SE code 2.06. 
+
+\subsection{Other Ethical System Analysis} 
+\subsubsection{Kant's Viewpoint}
+It can be argued that if Apple does not perform their ``duty" of creating strong privacy protections for its users, Apple would commit an immoral action according to the philosophies of Kant \cite{kant}. Immanuel Kant was a German philosopher, who was born on April 22nd 1724 in Konigsberg Prussia. His philosophies are centered around ``morality of duty". It says that in order to act morally is to perform one's duty, and one's duty is to obey the innate moral laws" \cite{fortunecity}. 
+
+Kant's theory of \emph{Categorical Imperative} expands on``good will" and duty. Categorical Imperative ``helps us (engineers) know which actions are obligatory and which are forbidden" \cite{fortunecity}. It is based on the following three premises: universal law, treat humans as ends in themselves and act as if you live in a kingdom of ends\cite{fortunecity}. The premises as a whole, state that one should always make decisions based on general laws and the decisions should treat others (clients) as one (Apple) would like to be treated. In other words, it means that Apple would be seen ``good will," if Apple had taken precautions to perform their duty of protecting its users' personal information. In the court case of Lalo vs. Apple, App Store was found to contain software that exposed users' personal data without informing the users, so Apple did not perform their ``duty." This indicates that Apple did not comply with their laws. 
+
+In addition, Kant's theory of categorical imperative stated previously can be used to say that Apple did not respect their clients and treated them fairly. While treating one fairly and with respect would require Apple to provide fair communication between both parties, the user and the client. Therefore, by not performing their duty to protect the user, Apple created dishonest and unfair environment, by making false statements. Thus, Kant would see Apple's actions as a wrongful act.
+
+\subsubsection{Utilitarianism Viewpoint}
+According to Utilitarianism, if Apple and its applications' actions do not produce an increase in "happiness" for their users then Apple would be seen immoral \cite{utilitarian}. Utilitarianism is an ethical system whose principles states that people should act such that it causes the greatest amount of happiness for the most people. In other words, it means that Apple and applications should perform actions that provide their mobile users with a great amount of happiness \cite{utilitarian}.  Threatpost, a security news service, claimed that clients would not like their personal life to be exposed to an unknown authority (advertisement agencies) \cite{threatpost}. The court case of Lalo vs. Apple resulted that Lalo was ``unhappy" that he was never aware and that his personal information was shared among various advertisement agencies. Given that the users were unhappy, Apple and applications will be seen immorally wrong under the principles of Utilitarian \cite{scribd}. 
+
+\subsubsection{Deontology Viewpoint}
+Deontological Ethics is an ethical system, used to describe choices that are ``morally required, forbidden or permitted" in society. These viewpoints help one determine what kind of person we are or should be. Deontological systems are based on the idea that humans should treat other humans as they would like to be treated with respect and dignity. Deontological ethics defines any actions performed as either right or wrong \cite{den}. Acting unjustly, such as breaking a promise would be seen as a wrongful act under deontology \cite{den2}. 
+
+Apple claims in their business policy that they will protect all confidential information of their users, but Veracode found Apple's statement to be deceptive. In addition, Apple allowed itself and applications downloaded from the store to collect and share users' sensitive data with advertisement agency. Thus, these actions violate users' privacy. Therefore, the false marks of protecting the user would be seen wrong by a Deontologist, since they believed that one should always act in a way that does no harm or violates personal property. 
+
+
+%%%%%%%%%%%%%%%%%%
+%%% Conclusion %%%
+%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+After research came out indicating that there is an insecure file containing personal data on all Apple products, users began to wonder how much of their private information is being violated by the mobile industry. Since the user lacks the knowledge of how the inner hardware or the software running on Apple products work, we all trust companies to make ethical decision on treating their (clients) fairly with respect.
+
+Apple had claimed in their privacy policy and as well in their Business Values that they will respect all confidential information of the client \cite{insiderprivacy}. In addition, Apple claims to review each application before offering it to users. Furthermore, Apple contends to have implemented app privacy standards, and claims to have created strong privacy protections for its customers, ensuring that the user is protected \cite{theregister}. 
+
+However, this was not the case regarding Apple, as many class action lawsuits were filed against the company. Lawsuits such as Lalo vs Apple and Diaz vs Apple proved Apple to be wrong. In both of these cases, the legal court found that Apple violated privacy laws by sharing unauthorized use of users' personal data. Therefore, Apple did not develop software that respected the privacy of the users.
+
+When considering the Software Engineering code, Apple failed to avoid deception by making false promises to their clients. Under Kant's principle of ethics, Apple was proved to be an ``irrational being". This is demonstrated by the fact that Apple did not make decisions based on general laws and treating others (clients) fairly as one (Apple) would like to be treated \cite{den} \cite{den2}.
+
+In violating the Software Engineering tenets, 1.06, 2.03 and 3.12, Apple was clearly unethical by allowing the continued transmission of sensitive user data. It is undoubtedly immoral and wrong to release consumers' data to application vendors without the user's consent.
+
+%end the two column format
+\end{multicols}
+\newpage
+
+%cite all the references from the bibtex you haven't explicitly cited
+\nocite{}
+
+\bibliographystyle{IEEEannot}
+
+\bibliography{texreport}
+
+\end{document}
